@@ -1,0 +1,15 @@
+server:
+  host: "0.0.0.0"
+  port: 8080
+
+android:
+  dropper_pkg: "com.pentest.dropper"
+  dropper_path: "payloads/dropper.apk"
+  payload_path: "payloads/malicious.apk"
+
+devices:
+  - "192.168.1.100:5555"
+  - "192.168.1.101:5555"
+
+mitm:
+  port: 8080
